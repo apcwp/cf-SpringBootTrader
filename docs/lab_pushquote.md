@@ -24,7 +24,7 @@ Luckily, Pivotal Cloud Foundry allows us to assign a [`random-route`](http://doc
 
   > Manifest files are generated as part of the build. They are placed in `springboottrades-quotes/build`
 
-2. When the script has finished, set the `CF_TARGET` environment variable in both applications to the API endpoint of your Elastic Runtime instance (as in `https://api.example.com`), then restage the applications so that the changes will take effect.
+2. When the script has finished, set the `CF_TARGET` environment variable in both applications to the API endpoint of your Elastic Runtime instance (as in `https://api.example.com` if using PWS this is `https://api.run.pivotal.io` ), then restage the applications so that the changes will take effect.
 
   ```
   $ cf set-env quotes CF_TARGET https://api.cloudfoundry.com
@@ -37,31 +37,7 @@ Luckily, Pivotal Cloud Foundry allows us to assign a [`random-route`](http://doc
 
   > IMPORTANT: The Starters for Spring Cloud Services has a dependency on Spring Security, and by default, this will cause all client application endpoints to be protected by HTTP Basic authentication. You can disable this; see ["Disable HTTP Basic Authentication"](http://docs.pivotal.io/spring-cloud-services/service-registry/registering-a-service.html#disable-http-basic-auth) in the [Spring Cloud Services documentation for Service Registry](http://docs.pivotal.io/spring-cloud-services/service-registry/).
 
-##Deploying without Spring Cloud Services
 
-  If Spring Cloud Services are not available, you should have pushed an instance of the [discovery service](https://github.com/dpinto-pivotal/cf-SpringBootTrader-extras) to the cloud. Now, you'll have to create a [*User-provided service*](http://docs.pivotal.io/pivotalcf/devguide/services/user-provided.html) and bind it to the quote service.
-
-  ### Exercise
-  1. Create a *user provided service* using the CLI.
-
-    Name this service **circuit-breaker-dashboard** and specify the URI of your instance of the registry service. For example:
-
-    `cf cups discovery-service -p '{"tag":"eureka","uri":"<my-eureka-URI>"}'`
-
-    The URI of your discovery service is the URI where your dashboard service is deployed. This was displayed at the end of `cf push` command when deploying the discovery service.
-    > The URI will be similar to `eureka-dpinto.cfapps.io`.
-
-    > Do **not** specify the protocol!!! ie. "http://"
-
-    2. push the application
-
-##Running it locally
-  To run the quote service locally, you can use the gradle wrapper script as such:
-
-  ```
-  gradlew :springboottrades-quotes:bootRun
-  ```
-  The service should start up and bind to the discovery service running locally.
 
 # Summary
 

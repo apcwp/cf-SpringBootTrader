@@ -37,7 +37,7 @@ You can obtain the CLI for multiple OS [here](https://github.com/cloudfoundry/cl
 
 Clone the GIT repository to your local machine. On the command line issue the following command:
 
-```git clone https://github.com/dpinto-pivotal/cf-SpringBootTrader.git```
+```git clone https://github.com/hpejcinovic-pivotal/cf-SpringBootTrader.git```
 
 This command will copy the code in the repository to your local machine, creating a directory named `cf-SpringBootTrader`. All actions will now be done inside this directory.
 

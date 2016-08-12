@@ -19,9 +19,7 @@ The workshops follow a series of exercises, or labs, and you can find links to t
 1. [Architecture](#architecture)
 2. [Deploying the application](#deployment)
 3. [Workshops](#workshops)
-4. [Demos](#demos)
-5. [Roadmap](#roadmap)
-6. [Contributing to the project](#contributing)
+
 
 
 #Architecture
@@ -81,9 +79,7 @@ At Pivotal we love education, not just educating ourselves, but also educating o
 5. [Pushing the Quote service] [pushquote]
 6. [Pushing all the services] [pushall]
 7. [Scaling the services] [scale]
-8. Auto Scaling - TODO: use autoscaler service!
-9. [Blue/Green deployments] [bluegreen]
-10. Monitor workshop - TODO: show how to monitor microservices using springbootadmin, ELK tile and Zipkin.
+8. [Blue/Green deployments] [bluegreen]
 
 
 [setup]: docs/lab_setup.md
@@ -95,84 +91,4 @@ At Pivotal we love education, not just educating ourselves, but also educating o
 [scale]: docs/lab_scale.md
 [bluegreen]: docs/lab_bluegreen.md
 
-#Demos
 
-###1. Deploying to **Pivotal Cloud Foundry**.
-TODO: document a walk through of this demo. This is a walkthough of the workshop above.
-- Deploying microservices to Cloud Foundry.
-- Creating and binding services to applications.
-
-###2. Service discovery.
-TODO: document a walk through of this demo.
-
-###3. Scalability
-TODO: document a walk through of this demo.
-- provide a load generator to mimic users.
-- scale instances.
-
-###4. Configuration Management.
-TODO: document a walk through of this demo.
-
-###5. Traceability across all services.
-TODO: document a walk through of this demo using Zipkin and Kibana.
-
-###6. Continuous Integration/Continuous Delivery.
-TODO: document a walk through of this demo.
-
-###7. Operations Demo
-TODO: document how to operate/monitor several microservices, using Spring Boot Admin and ELK tile
-
-
-#Features
-
-- **Discovery service:**
-  All microservices register with the [Discovery Service](http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html) and discover other microservices through it.
-- **Correlation/Traceability:**
-  Traceability of requests through all the microservices. This is done using [Spring-cloud-sleuth](http://cloud.spring.io/spring-cloud-sleuth/).
-- **Config Server:**
-  The microservices obtain the configuration from a [Configuration Service](http://cloud.spring.io/spring-cloud-config/) backed by a git repository. This means that configuration is now auditables and version controlled, as well as providing the ability to refresh configuration during runtime.
-
-#Roadmap
-
-The roadmap for this project is constantly evolving. Please feel free to reach out with ideas.
-- **Better APIs:**
-  Better APIs with documentation that conform to some standard and logic.
-- **Security:**
-  Secure microservices with OAUTH2.
-- **Monitoring/Operations:**
-  Show how to monitor a distributed system comprising of multiple microservices.
-  This will comprise of:
-   - Spring Boot Admin
-   - ELK tile
-   - Zipkin
-- **Stock analysis system:**
-   A microservice, or set of microservices, to analyse stock and provide recommendations. Also, to show polyglot persistence as well as more sophisticated data workloads.
-- **Mobile UI:**
-  Mobile interface to expose the services on an iOS device and/or Android device natively, making use of the [Pivotal Cloud Foundry Mobile Services](http://docs.pivotal.io/mobile/index.html).
-
-#Contributing
-Everyone is encouraged to help improved this project.
-
-The master branch has the latest stable release. development happens in the development branch (or feature branches that get merged into development branch). So please check if want you to develop is already in the development branch.
-
-Here are some ways you can contribute:
-
-- by using alpha, beta, and prerelease versions (ie from the development branch)
-- by reporting bugs
-- by suggesting new features
-- by writing or editing documentation
-- by writing code (no patch is too small: fix typos, add comments, clean up inconsistent whitespace)
-- by refactoring code
-- by closing [issues](https://github.com/dpinto-pivotal/cf-SpringBootTrader/issues)
-
-##Submitting an Issue
-
-We use the [GitHub issue tracker](https://github.com/dpinto-pivotal/cf-SpringBootTrader/issues) to track bugs and features. Before submitting a bug report or feature request, check to make sure it hasn't already been submitted. When submitting a bug report, please include any relevant information. Ideally, a bug report should include a pull request with failing specs, and maybe even a fix!
-
-##Submitting a Pull Request
-
-1. Fork the project.
-2. Create a topic branch.
-3. Implement your feature or bug fix.
-4. Commit and push your changes.
-5. Submit a pull request (to the development branch).

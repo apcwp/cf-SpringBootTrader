@@ -8,3 +8,6 @@ info:
     name: ${name}
     description: ${description}
     version: ${version}
+security:
+  basic:
+    enabled: false

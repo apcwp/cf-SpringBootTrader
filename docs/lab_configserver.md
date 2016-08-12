@@ -17,7 +17,7 @@ When prompted for the name of the service, insert **"config-server"** and bind i
 
 2. To set up Configuration Service we need to provide it with a Git or Subversion repo where the configuration for your projects will be store. For this exercise we'll use Git repo and we'll do it via cli to demonstrate configuring services via CLI.
 
-3. First clone the Git repo so that you can make changes to it, if you wish so 
+3. First fork (in Github) and then clone the Git repo so that you can make changes to it, if you wish so 
   ```
   $ git clone https://github.com/hpejcinovic-pivotal/cf-SpringBootTrader-config.git
   ```  

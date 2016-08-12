@@ -1,4 +1,3 @@
->**This repository is no longer maintained. The project has moved [here](https://github.com/pivotal-bank/cf-SpringBootTrader)**
 
 # cf-SpringBootTrader
 

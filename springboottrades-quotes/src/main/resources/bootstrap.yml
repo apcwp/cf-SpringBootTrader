@@ -10,4 +10,4 @@ info:
     version: ${version}
 security:
   basic:
-    enabled: false
+    enabled: true
